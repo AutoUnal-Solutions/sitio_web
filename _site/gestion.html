@@ -1,0 +1,420 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Gestión de producción</title>
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+        <link rel="icon" href="/assets/images/webTabIcon.png"" type="image/x-icon">
+    </head>
+    <body>        
+        <div class="header" >
+            <a href="/index.html">
+                <img src="/assets/images/logo.png" alt="logo"  class="logo-header">
+            </a>          
+
+            <div class="header-index">
+                <a href="/equipo.html"><button class="about-us"><i class="bi bi-people-fill"></i></button></a>
+                <button class="indexBtn"><i class="bi bi-list-columns-reverse"></i></button>        
+            </div>
+        </div>  
+
+        <div class="overlay-index">
+            <div class="index">
+                <h1>Índice</h1>
+                <br>
+                <h2><a href="/planeacion.html">Planeación</a></h2>
+                <h2><a href="/gestion.html">Gestión de Producción</a></h2>
+                <h2><a href="/economia.html">Evaluación económica</a></h2>
+                <h2><a href="/robotica.html">Celda robótica</a></h2>
+                <h2><a href="/controladores.html">Controladores Industriales</a></h2>
+                <h2><a href="/dfactory.html">Digital Factory</a></h2>
+                <h2><a href="/scada.html">SCADA</a></h2>
+                <h2><a href="/industria4.html">Industria 4.0</a></h2>
+            </div>
+        </div>
+        <div class="page-intro">
+    <h1>Gestión de Producción</h1>
+    <div class="intro-text">
+        Esta sección muestra los procesos de producción, sus etapas y sus
+        indicadores KIP. Se presenta con distintos diagramas que ilustran 
+        las secuencias de los procesos y permiten un análisis antes y 
+        después de la automatización.
+    </div>  
+    <br>  
+    <form id="formProductos" action="#">
+        <label for="lang"><h2>Productos</h2></label>
+        <select name="productos" id="lang">
+            <option value="seleccion">Seleccione Producto</option>
+            <option value="sinfin">Sin Fin - Corona</option>
+            <option value="conicos">Engranajes Cónicos</option>
+            <option value="helicoidales">Engranajes Helicoidales</option>
+        </select>
+        <input type="submit" value="Actualizar" />
+    </form>
+</div>
+
+<br>
+<br>
+<div class="header-slider">
+    <button class="prev"><i class="bi bi-arrow-left-square-fill"></i></button>
+    <h2>Pre-Automatización Producto Sin Fin - Corona</h2>
+    <button class="next"><i class="bi bi-arrow-right-square-fill"></i></button>
+</div>
+
+<div id="slider-gestion-sinfin" class="slider-gestion">
+    <div id="gestion-container-sinfin" class="gestion-container">
+        <div class="gestion-section">
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>Diagrama de operaciones de proceso Sin Fin - Corona</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/sinfin/procesosPRE.svg" alt="operaciones"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Pre] Diagrama de análisis de proceso Sin Fin - Corona</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/sinfin/analisisPRE.svg" alt="analisis"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Pre] Diagrama de Spaguetti Sin Fin - Corona</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/sinfin/spaghettiPRE.svg" alt="spaguetti"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Pre] Diagrama VSM Sin Fin - Corona</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/sinfin/vsmPRE.svg" alt="pre-vsm"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Pre] OEE Sin Fin - Corona</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/sinfin/oeePRE.svg" alt="OEE"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="video-container">
+                <h2>[Pre] Simulación Tecno-Matrix Sin Fin - Corona</h2>
+                <iframe 
+                    src="https://www.youtube.com/embed/Qo0eKrPZasQ" 
+                    title="Simulación Pre-Automatización"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="gestion-section">
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>Diagrama de operaciones de proceso Sin Fin - Corona</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/sinfin/procesosPOST.svg" alt="operaciones"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Post] Diagrama de análisis de proceso Sin Fin - Corona</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/sinfin/analisisPOST.svg" alt="analisis"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Post] Diagrama de Spaguetti Sin Fin - Corona</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/sinfin/spaghettiPOST.svg" alt="spaguetti"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Post] Diagrama VSM Sin Fin - Corona</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/sinfin/vsmPOST.svg" alt="pre-vsm"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Post] OEE Sin Fin - Corona</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/sinfin/oeePOST.svg" alt="OEE"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="video-container">
+                <h2>[Post] Simulación Tecno-Matrix Sin Fin - Corona</h2>
+                <iframe 
+                    src="https://www.youtube.com/embed/76S5OAxummk" 
+                    title="Simulación Pre-Automatización"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="slider-gestion-conicos" class="slider-gestion">
+    <div id="gestion-container-conicos" class="gestion-container">
+        <div class="gestion-section">
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>Diagrama de operaciones de proceso Engranajes Cónicos </h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/conicos/procesosPRE.svg" alt="operaciones"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Pre] Diagrama de análisis de proceso Engranajes Cónicos</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/conicos/analisisPRE.svg" alt="analisis"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Pre] Diagrama de Spaguetti Engranajes Cónicos</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/conicos/spaghettiPRE.svg" alt="spaguetti"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Pre] Diagrama VSM Engranajes Cónicos</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/conicos/vsmPRE.svg" alt="pre-vsm"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Pre] OEE Engranajes Cónicos</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/conicos/oeePRE.svg" alt="OEE"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="video-container">
+                <h2>[Pre] Simulación Tecno-Matrix Engranajes Cónicos</h2>
+                <iframe 
+                    src="https://www.youtube.com/embed/76S5OAxummk" 
+                    title="Simulación Pre-Automatización"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="gestion-section">
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>Diagrama de operaciones de proceso Engranajes Cónicos</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/conicos/procesosPOST.svg" alt="operaciones"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Post] Diagrama de análisis de proceso Engranajes Cónicos</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/conicos/analisisPOST.svg" alt="analisis"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Post] Diagrama de Spaguetti Engranajes Cónicos</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/conicos/spaghettiPOST.svg" alt="spaguetti"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Post] Diagrama VSM Engranajes Cónicos</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/conicos/vsmPOST.svg" alt="post-vsm"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Post] OEE Engranajes Cónicos</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/conicos/oeePOST.svg" alt="OEE"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="video-container">
+                <h2>[Post] Simulación Tecno-Matrix Engranajes Cónicos</h2>
+                <iframe 
+                    src="https://www.youtube.com/embed/76S5OAxummk" 
+                    title="Simulación Pre-Automatización"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="slider-gestion-helicoidales" class="slider-gestion">
+    <div id="gestion-container-helicoidales" class="gestion-container">
+        <div class="gestion-section">
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>Diagrama de operaciones de proceso Engranajes Helicoidales</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/helicoidales/procesosPRE.svg" alt="operaciones"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Pre] Diagrama de análisis de proceso Engranajes Helicoidales</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/helicoidales/analisisPRE.svg" alt="analisis"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Pre] Diagrama de Spaguetti Engranajes Helicoidales</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/helicoidales/spaghettiPRE.svg" alt="spaguetti"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Pre] Diagrama VSM Engranajes Helicoidales</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/helicoidales/vsmPRE.svg" alt="pre-vsm"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Pre] OEE Engranajes Helicoidales</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/helicoidales/oeePRE.svg" alt="OEE"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="video-container">
+                <h2>[Pre] Simulación Tecno-Matrix Engranajes Helicoidales</h2>
+                <iframe 
+                    src="https://www.youtube.com/embed/76S5OAxummk" 
+                    title="Simulación Pre-Automatización"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="gestion-section">
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>Diagrama de operaciones de proceso Engranajes Helicoidales</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/helicoidales/procesosPOST.svg" alt="operaciones"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Post] Diagrama de análisis de proceso Engranajes Helicoidales</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/helicoidales/analisisPOST.svg" alt="analisis"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Post] Diagrama de Spaguetti Engranajes Helicoidales</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/helicoidales/spaghettiPOST.svg" alt="spaguetti"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Post] Diagrama VSM Engranajes Helicoidales</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/helicoidales/vsmPOST.svg" alt="pre-vsm"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="img-zoom-section">
+                <h2>[Post]OEE Engranajes Helicoidales</h2>
+                <div class="img-zoom">
+                    <img src="/assets/images/gestion/helicoidales/oeePOST.svg" alt="OEE"> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="video-container">
+                <h2>[Post] Simulación Tecno-Matrix Engranajes Helicoidales</h2>
+                <iframe 
+                    src="https://www.youtube.com/embed/76S5OAxummk" 
+                    title="Simulación Pre-Automatización"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<script src="/assets/js/slider-gestion.js"></script>
+
+        <div class="footer">
+            <div class="logo-footer">
+                <h1>Autounal Solutions</h1>
+                <a href="https://github.com/AutoUnal-Solutions/Documentos-APM">
+                    <button class="git"><i class="bi bi-github"></i></button>
+                </a>
+                <a href="https://www.youtube.com/@AutoUnalSolutions">
+                    <button class="youtube"><i class="bi bi-youtube"></i></button>
+                </a>            
+            </div>    
+            <div class="project-footer"><h4>Proyecto APM-2025-2S</h4></div>
+        </div>
+
+        <script src="/assets/js/script.js"></script>
+        
+    </body>
+</html>
