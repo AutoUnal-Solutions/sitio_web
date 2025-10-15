@@ -267,6 +267,33 @@ button {
   text-align: center;
 }
 
+.info-sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.info {
+  text-align: justify;
+  width: 60%;
+  margin: 10px;
+}
+
+.info-img {
+  width: 35%;
+  text-align: center;
+  margin: 10px;
+}
+
+.info-img img{
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 .intro-text {
   text-align: center;
   width: 80%;
