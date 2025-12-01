@@ -2,17 +2,103 @@
 layout: default
 title: Celda Robotica
 ---
-
 <div class="page-intro">
-    <h1>Celda robótica</h1>
-    En esta sección se muestra el proceso de selección de una celda
-    robotica, los parametros técnicos que se tomaron a consideración 
-    y las regulaciones a tener en cuenta.
+    <h1>Celda Robotica</h1>
 </div>
+
+<br>
 <br>
 <div class="img-zoom-section">
     <div class="img-zoom">
-        <img src="{{ '/assets/images/nodisponible.png' | relative_url }}" alt="operaciones"> 
+        <img src="{{ '/assets/images/robotica/ABB.png' | relative_url }}" alt="spaguetti">
     </div>
 </div>
 <br>
+<br>
+
+<div class="info-sec">    
+    <div class="info">        
+        <p>La Celda Robotizada propuesta en el proyecto se centra en la función de Machine Tending, 
+        específicamente para asistir el proceso de rectificado de engranajes utilizados en los 
+        motorreductores. Este proceso es altamente repetitivo y exige un posicionamiento preciso de 
+        cada pieza dentro de las máquinas CNC encargadas del rectificado, lo que convierte a la 
+        automatización en una solución ideal.</p>
+
+        <p>La implementación de esta celda permite optimizar la eficiencia, incrementar la exactitud 
+        del proceso y mejorar las condiciones de seguridad dentro de la planta. Al automatizar la 
+        manipulación y carga de los engranajes, se reduce la variabilidad, se garantiza un flujo 
+        continuo de producción y se minimiza la intervención directa del operario en tareas de riesgo.</p>
+        <ul>
+            <li>Mayor eficiencia y productividad al automatizar una tarea repetitiva y de alto volumen.</li>
+            <li>Mejora en la seguridad, eliminando la necesidad de que el operador interactúe directamente 
+            con maquinaria en movimiento.</li>
+            <li>Alta precisión y consistencia en el posicionamiento de los engranajes dentro de las máquinas 
+            CNC, reduciendo errores y retrabajos.</li>
+            <li>Incremento en la continuidad del proceso, asegurando un flujo más estable y 
+            disminuyendo tiempos muertos.</li>
+        </ul>    
+        <p>El IRB 4600-20/2.50, integrado al proyecto como la opción más adecuada para la celda robótica 
+        propuesta, se complementa con el controlador IRC5, reconocido por su alta precisión en el seguimiento 
+        de trayectorias y su capacidad para coordinar múltiples equipos dentro de una misma línea. 
+        Este controlador permite una programación más flexible mediante RAPID, optimiza los tiempos de ciclo 
+        con TrueMove y QuickMove, y facilita la supervisión remota del desempeño de la celda.</p>
+        <p>Además, la combinación del robot con el IRC5 aporta características clave para el rediseño de 
+        la línea:</p>
+        <ul>
+            <li>Alta repetibilidad (≈0.05 mm), indispensable para garantizar estabilidad en procesos de 
+                ensamble y manipulación.</li>
+            <li>Velocidad de operación elevada, lo que contribuye a mejorar la disponibilidad global del 
+            sistema pese a las limitaciones de desempeño observadas en la simulación.</li>
+            <li>Eficiencia energética, útil para mantener costos operativos bajos aun cuando se incrementen 
+            los volúmenes de producción.</li>
+            <li>Seguridad integrada, que facilita el diseño de una celda compacta cumpliendo con 
+            normas industriales.</li>
+        </ul>   
+    </div>
+    <div class="info-img">
+        <img src="{{ '/assets/images/robotica/ABB-working-range.jpg' | relative_url }}" 
+        alt="motorreductor" class="motorreductor">
+    </div>
+</div>
+
+<div class="page-intro">
+    <h1>Selección Gripper</h1>
+</div>
+
+<div class="info-sec">    
+    <div class="info">        
+        <p>El gripper OnRobot 3FG25 permite manipular engranajes no solo desde su diámetro exterior de 
+            hasta 155 mm, sino también desde diámetros internos. Su diseño de tres dedos se expande 
+            hacia afuera para sujetar la pieza desde el orificio central, ofreciendo un agarre firme 
+            incluso cuando el engranaje supera el límite exterior permitido. Esta capacidad interna 
+            mantiene la estabilidad, soporta cargas de hasta 25 kg y asegura una colocación precisa 
+            en las máquinas CNC.</p>
+
+        <table class="table-pesos">
+            <tr>
+                <th>Elemento</th>
+                <th>Peso (kg)</th>
+            </tr>
+            <tr>
+                <td>Engranaje Cónico</td>
+                <td>3.73</td>
+            </tr>
+            <tr>
+                <td>Engranaje Helicoidal</td>
+                <td>3.35</td>
+            </tr>
+            <tr>
+                <td>Corona</td>
+                <td>5.99</td>
+            </tr>
+            <tr>
+                <td>Gripper 3DG25</td>
+                <td>1.6</td>
+            </tr>
+        </table>
+    </div>
+    <div class="info-img">
+        <img src="{{ '/assets/images/robotica/gripper.webp' | relative_url }}" 
+        alt="motorreductor" class="motorreductor">
+    </div>
+</div>

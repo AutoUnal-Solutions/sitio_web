@@ -287,6 +287,16 @@ button {
   margin: 10px;
 }
 
+#info-OEE{
+  width: 35%;
+  padding: 15px;;
+}
+
+#OEE{
+  width: 60%;
+}
+
+
 .info-img img{
   width: 100%;
   height: auto;
@@ -349,6 +359,11 @@ select {
   transition: transform 0.2 ease;
 }
 
+#Gestion-proyecto{
+  margin: 45px;
+  padding: 15px;
+}
+
 .table-img {
   position: absolute;
   top: 28%;
@@ -402,4 +417,73 @@ select {
 .video-container iframe {
   width: 100%;
   height: 100%;
+}
+
+.container-team{
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.rolodex {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: hidden;
+  border-right: 2px solid #002060
+}
+
+.personal-info{
+  width: 100%;
+  height: 19%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.bi-person-rolodex {
+  height: 100%;
+  width: 40%;
+  font-size: 3.5rem;
+  color: #002060;
+  padding: 5px;
+}
+
+.text-info{
+  height: 100%;
+  width: 59%;
+  text-align: left;
+  padding: 5px;
+}
+
+.project-report{
+  flex: 1;
+  padding: 5px;
+  padding-left: 25px;
+  overflow-y: scroll;
+}
+
+.table-pesos {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin: 20px 0;
+}
+
+.table-pesos th, 
+.table-pesos td {
+    border: 1px solid #ccc;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.table-pesos th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.table-pesos tr:nth-child(even) td {
+    background-color: #fafafa;
 }

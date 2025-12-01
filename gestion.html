@@ -4,15 +4,175 @@ title: Gestión de producción
 ---
 <div class="page-intro">
     <h1>Gestión de Producción</h1>
-    <div class="intro-text">
-        Esta sección muestra los procesos de producción, sus etapas y sus
-        indicadores KIP. Se presenta con distintos diagramas que ilustran 
-        las secuencias de los procesos y permiten un análisis antes y 
-        después de la automatización.
-    </div>  
-    <br>  
+</div>
+
+<div class="info-sec">    
+    <div class="info">        
+        El proyecto partió de los datos recolectados durante la visita a la planta de Industrias 
+        <a href="https://www.ramfe.com.co">RAMFE</a>, ubicada en la Cra 69 #17a-96 en Bogotá, Colombia. 
+        Esta visita permitió comprender de primera mano el funcionamiento general de 
+        la planta, la disposición de su maquinaria, los flujos de trabajo y las tareas realizadas por los colaboradores 
+        en cada etapa del proceso productivo.
+
+        A partir de esta información se llevó a cabo un análisis preliminar que permitió identificar las áreas con mayor 
+        potencial de mejora. Para efectos del estudio se seleccionó como caso principal el proceso de fabricación del 
+        motorreductor Sin-Fin Corona, del cual se estimo una producción de 75 unidades al mes. 
+        Su elección permitió obtener una visión clara del comportamiento actual 
+        de la línea, así como de las oportunidades para implementar automatización y optimización operativa.
+
+        Los hallazgos obtenidos se organizaron y sintetizaron en una serie de esquemas diagnósticos que sirven como 
+        base para la propuesta de mejora:    
+        <ul>
+            <li>Diagrama de Spaguetti</li>
+            <li>Diagrama Pre-VSM</li>
+        </ul>        
+        Estos documentos, presentados a continuación, permiten visualizar el estado actual del proceso, comprender sus flujos 
+        y detectar las principales ineficiencias, sirviendo como punto de partida para el diseño de soluciones orientadas a 
+        la modernización y aumento de productividad dentro de la planta.
+    </div>
+    <div class="info-img">
+        <img src="{{ '/assets/images/gestion/vista-general.jpg' | relative_url }}" 
+        alt="motorreductor" class="motorreductor">
+    </div>
+</div>
+<br>
+<br>
+<div class="img-zoom-section">
+    <h2>Diagrama de Spaguetti Pre-Automatización</h2>
+    <div class="img-zoom">
+        <img src="{{ '/assets/images/gestion/spaghettiPRE.svg' | relative_url }}" alt="spaguetti">
+    </div>
+</div>
+<br>
+<br>
+<div class="img-zoom-section">
+    <h2>Diagrama Pre-VSM</h2>
+    <div class="img-zoom">
+        <img src="{{ '/assets/images/gestion/preVSM.svg' | relative_url }}" alt="pre-vsm"> 
+    </div>
+</div>
+<br>
+<br>
+<div class="info-sec">    
+    <div class="info">        
+        <p>El diagrama Pre-VSM permitió identificar un tiempo de operación especialmente elevado en la etapa de rectificado, 
+        lo que sugería una posible restricción dentro del flujo de producción. Para validar esta hipótesis, se realizó una 
+        simulación del proceso utilizando Plant Simulation, confirmando la presencia de un cuello de botella en esta fase.
+        </p><p>
+        La gráfica obtenida muestra que el rectificador de ejes permanece ocupado durante la mayor parte del tiempo disponible. 
+        En contraste, las demás máquinas presentan una baja tasa de utilización, ya que pasan largos periodos en modo de espera 
+        o bloqueadas debido a la acumulación de piezas antes del rectificado. Este desbalance evidencia que la etapa de 
+        rectificado limita la capacidad global del sistema y afecta directamente los tiempos de ciclo y la eficiencia total de 
+        la línea. Este hallazgo resultó fundamental para orientar las decisiones del proyecto, ya que coincidía 
+        con la necesidad de incorporar automatización y diseñar la celda robótica propuesta.
+        </p><p>
+        Antes de avanzar hacia la solución planteada, se presenta a continuación la simulación del proceso actual de la 
+        planta junto con los indicadores resultantes, los cuales sirven como línea base para evaluar el impacto de las 
+        mejoras posteriores.</p>
+    </div>
+    <div class="info-img">
+        <img src="{{ '/assets/images/gestion/graficaPreautomatizacion.png' | relative_url }}" 
+        alt="motorreductor" class="motorreductor">
+    </div>
+</div>
+<br>
+<br>
+<div class="video-container">
+    <h2>Simulación Pre-Automatización Plant Simulation Sin Fin - Corona</h2>
+    <iframe 
+        src="https://youtube.com/embed/EAoVDd7Pl68" 
+        title="Simulación Pre-Automatización"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+</div>
+<br>
+<br>
+<div class="info-sec">    
+    <div class="info" id="info-OEE">     
+        <p>Los indicadores obtenidos evidencian una falencia importante en la disponibilidad de las máquinas, ya que la 
+        mayoría de estaciones presentan tiempos prolongados de bloqueo o espera. Esta condición reduce significativamente 
+        el OEE y limita la capacidad real de producción de la planta.
+        </p>
+    </div>
+    <div class="info-img" id="OEE">
+        <img src="{{ '/assets/images/gestion/preOEE.png' | relative_url }}" 
+        alt="motorreductor" class="motorreductor">
+    </div>
+</div>
+
+<div class="info-sec">    
+    <div class="info">        
+        <p>Con base en el análisis previo y proyectando una demanda mensual de 500 motorreductores distribuidos en tres tipos 
+        de producto, se llevó a cabo la planificación de un nuevo layout industrial. Este rediseño incluye la adquisición 
+        de maquinaria adicional, la desincorporación de equipos con bajo desempeño y, en general, una reorganización 
+        completa de la línea para alcanzar los niveles de producción requeridos.
+        </p><p>
+        Las mejoras propuestas contemplan un aumento en la capacidad productiva por etapa, así como la incorporación de un 
+        sistema de automatización mediante una <a href="{{ '/robotica.html' | relative_url }}">celda robótica</a> y un sistema 
+        <a href="{{ '/scada.html' | relative_url }}">SCADA</a> elementos clave 
+        para garantizar continuidad operativa, trazabilidad y eficiencia.
+        </p><p>
+        El nuevo diagrama de Spaguetti evidencia una secuencia más ordenada en el flujo del proceso, reduciendo desplazamientos 
+        innecesarios y optimizando el uso del espacio. Por su parte, el nuevo diagrama VSM resalta mejoras significativas en 
+        los tiempos, especialmente en la etapa de rectificado, además de un ajuste favorable en el takt time general.</p>
+    </div>
+    <div class="info-img">
+        <img src="{{ '/assets/images/gestion/automatizacion.png' | relative_url }}" 
+        alt="motorreductor" class="motorreductor">
+    </div>
+</div>
+<br>
+<br>
+<div class="img-zoom-section">
+    <h2>Diagrama de Spaguetti Post-Automatización</h2>
+    <div class="img-zoom">
+        <img src="{{ '/assets/images/gestion/spaghettiPOST.jpg' | relative_url }}" alt="spaguetti">
+    </div>
+</div>
+<br>
+<br>
+<div class="img-zoom-section">
+    <h2>Diagrama Post-VSM</h2>
+    <div class="img-zoom">
+        <img src="{{ '/assets/images/gestion/postVSM.svg' | relative_url }}" alt="pre-vsm"> 
+    </div>
+</div>
+<br>
+<br>
+<div class="info-sec">    
+    <div class="info" id="info-OEE">     
+        <p>Finalmente, se llevó a cabo una nueva simulación del proceso en Plant Simulation, cuyos resultados y gráficas se 
+        presentan a continuación y permiten evaluar el OEE.Si bien este incremento refleja una mejora significativa en la 
+        disponibilidad, consecuencia directa de la reorganización del layout y de la reducción de bloqueos y tiempos de espera, 
+        también se observó una disminución en los indicadores de desempeño y calidad. Esto indica que, aunque el rediseño 
+        permitió aliviar el cuello de botella principal y aumentar la capacidad productiva, aún existen oportunidades 
+        importantes de optimización dentro del proceso. Para alcanzar niveles de eficiencia 
+        superiores será necesario avanzar hacia una mayor automatización, incorporar nueva maquinaria especializada y 
+        considerar una ampliación de la planta que permita distribuir mejor las operaciones.
+        </p>
+    </div>
+    <div class="info-img" id="OEE">
+        <img src="{{ '/assets/images/gestion/postOEE.png' | relative_url }}" 
+        alt="motorreductor" class="motorreductor">
+    </div>
+</div>
+<br>
+<br>
+<div class="video-container">
+    <h2>Simulación Post-Automatización Plant Simulation</h2>
+    <iframe 
+        src="https://youtube.com/embed/CJXzM05k0is" 
+        title="Simulación Post-Automatización"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+</div>
+<br>
+<br>
+<div class="page-intro"> 
     <form id="formProductos" action="#">
-        <label for="lang"><h2>Productos</h2></label>
+        <label for="lang"><h2>Esquemas y gráficas por productos</h2></label>
         <select name="productos" id="lang">
             <option value="seleccion">Seleccione Producto</option>
             <option value="sinfin">Sin Fin - Corona</option>
@@ -23,11 +183,12 @@ title: Gestión de producción
     </form>
 </div>
 
+
 <br>
 <br>
 <div class="header-slider">
     <button class="prev"><i class="bi bi-arrow-left-square-fill"></i></button>
-    <h2>Pre-Automatización Producto Sin Fin - Corona</h2>
+    <h2>Diagramas y análisis de proceso Sin Fin - Corona</h2>
     <button class="next"><i class="bi bi-arrow-right-square-fill"></i></button>
 </div>
 
@@ -39,53 +200,15 @@ title: Gestión de producción
             <div class="img-zoom-section">
                 <h2>Diagrama de operaciones de proceso Sin Fin - Corona</h2>
                 <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/sinfin/procesosPRE.svg' | relative_url }}" alt="operaciones"> 
+                    <img src="{{ '/assets/images/gestion/sinfin/procesosSINFIN.svg' | relative_url }}" alt="operaciones"> 
                 </div>
             </div>
             <br>
             <br>
             <div class="img-zoom-section">
-                <h2>[Pre] Diagrama de análisis de proceso Sin Fin - Corona</h2>
-                <iframe src="{{ '/assets/images/gestion/sinfin/analisisPRE.pdf' | relative_url }}" 
-                width="900" height="600"></iframe>
-                
-            </div>
-            <br>
-            <br>
-            <div class="img-zoom-section">
-                <h2>[Pre] Diagrama de Spaguetti Sin Fin - Corona</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/sinfin/spaghettiPRE.svg' | relative_url }}" alt="spaguetti"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="img-zoom-section">
-                <h2>[Pre] Diagrama VSM Sin Fin - Corona</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/sinfin/vsmPRE.svg' | relative_url }}" alt="pre-vsm"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <!---
-            <div class="img-zoom-section">
-                <h2>[Pre] OEE Sin Fin - Corona</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/sinfin/oeePRE.svg' | relative_url }}" alt="OEE"> 
-                </div>
-            </div>
-            -->
-            <br>
-            <br>
-            <div class="video-container">
-                <h2>[Pre] Simulación Tecno-Matrix Sin Fin - Corona</h2>
-                <iframe 
-                    src="https://www.youtube.com/embed/Qo0eKrPZasQ" 
-                    title="Simulación Pre-Automatización"
-                    frameborder="0"
-                    allowfullscreen>
-                </iframe>
+                <h2>Diagrama de análisis de proceso Sin Fin - Corona</h2>
+                <iframe src="{{ '/assets/images/gestion/sinfin/analisisSINFIN.pdf' | relative_url }}" 
+                width="900" height="600"></iframe>                
             </div>
         </div>
 
@@ -93,56 +216,11 @@ title: Gestión de producción
             <br>
             <br>
             <div class="img-zoom-section">
-                <h2>Diagrama de operaciones de proceso Sin Fin - Corona</h2>
+                <h2>Gráficas</h2>
                 <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/sinfin/procesosPOST.svg' | relative_url }}" alt="operaciones"> 
+                    <img src="{{ '/assets/images/gestion/sinfin/estadisticaSINFIN.png' | relative_url }}" alt="estaSINFIN"> 
                 </div>
             </div>
-            <br>
-            <br>
-            <!--
-            <div class="img-zoom-section">
-                <h2>[Post] Diagrama de análisis de proceso Sin Fin - Corona</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/sinfin/analisisPOST.svg' | relative_url }}" alt="analisis"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="img-zoom-section">
-                <h2>[Post] Diagrama de Spaguetti Sin Fin - Corona</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/sinfin/spaghettiPOST.svg' | relative_url }}" alt="spaguetti"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="img-zoom-section">
-                <h2>[Post] Diagrama VSM Sin Fin - Corona</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/sinfin/vsmPOST.svg' | relative_url }}" alt="pre-vsm"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="img-zoom-section">
-                <h2>[Post] OEE Sin Fin - Corona</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/sinfin/oeePOST.svg' | relative_url }}" alt="OEE"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="video-container">
-                <h2>[Post] Simulación Tecno-Matrix Sin Fin - Corona</h2>
-                <iframe 
-                    src="https://www.youtube.com/embed/76S5OAxummk" 
-                    title="Simulación Pre-Automatización"
-                    frameborder="0"
-                    allowfullscreen>
-                </iframe>
-            </div>
-            -->
         </div>
     </div>
 </div>
@@ -155,110 +233,29 @@ title: Gestión de producción
             <div class="img-zoom-section">
                 <h2>Diagrama de operaciones de proceso Engranajes Cónicos </h2>
                 <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/conicos/procesosPRE.svg' | relative_url }}" alt="operaciones"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <!--
-            <div class="img-zoom-section">
-                <h2>[Pre] Diagrama de análisis de proceso Engranajes Cónicos</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/conicos/analisisPRE.svg' | relative_url }}" alt="analisis"> 
+                    <img src="{{ '/assets/images/gestion/conicos/procesosCONICO.svg' | relative_url }}" alt="operaciones"> 
                 </div>
             </div>
             <br>
             <br>
             <div class="img-zoom-section">
-                <h2>[Pre] Diagrama de Spaguetti Engranajes Cónicos</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/conicos/spaghettiPRE.svg' | relative_url }}" alt="spaguetti"> 
-                </div>
+                <h2>Diagrama de análisis de proceso Engranajes Cónicos</h2>
+                <iframe src="{{ '/assets/images/gestion/conicos/analisisCONICO.pdf' | relative_url }}" 
+                width="900" height="600"></iframe> 
             </div>
-            <br>
-            <br>
-            <div class="img-zoom-section">
-                <h2>[Pre] Diagrama VSM Engranajes Cónicos</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/conicos/vsmPRE.svg' | relative_url }}" alt="pre-vsm"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="img-zoom-section">
-                <h2>[Pre] OEE Engranajes Cónicos</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/conicos/oeePRE.svg' | relative_url }}" alt="OEE"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="video-container">
-                <h2>[Pre] Simulación Tecno-Matrix Engranajes Cónicos</h2>
-                <iframe 
-                    src="https://www.youtube.com/embed/76S5OAxummk" 
-                    title="Simulación Pre-Automatización"
-                    frameborder="0"
-                    allowfullscreen>
-                </iframe>
-            </div>
-            -->
         </div>
 
         <div class="gestion-section">
             <br>
             <br>
             <div class="img-zoom-section">
-                <h2>Diagrama de operaciones de proceso Engranajes Cónicos</h2>
+                <h2>Gráficas</h2>
                 <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/conicos/procesosPOST.svg' | relative_url }}" alt="operaciones"> 
+                    <img src="{{ '/assets/images/gestion/conicos/estadisticaCONICO.png' | relative_url }}" alt="operaciones"> 
                 </div>
             </div>
             <br>
             <br>
-            <!--
-            <div class="img-zoom-section">
-                <h2>[Post] Diagrama de análisis de proceso Engranajes Cónicos</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/conicos/analisisPOST.svg' | relative_url }}" alt="analisis"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="img-zoom-section">
-                <h2>[Post] Diagrama de Spaguetti Engranajes Cónicos</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/conicos/spaghettiPOST.svg' | relative_url }}" alt="spaguetti"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="img-zoom-section">
-                <h2>[Post] Diagrama VSM Engranajes Cónicos</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/conicos/vsmPOST.svg' | relative_url }}" alt="post-vsm"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="img-zoom-section">
-                <h2>[Post] OEE Engranajes Cónicos</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/conicos/oeePOST.svg' | relative_url }}" alt="OEE"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="video-container">
-                <h2>[Post] Simulación Tecno-Matrix Engranajes Cónicos</h2>
-                <iframe 
-                    src="https://www.youtube.com/embed/76S5OAxummk" 
-                    title="Simulación Pre-Automatización"
-                    frameborder="0"
-                    allowfullscreen>
-                </iframe>
-            </div>
-            -->
         </div>
     </div>
 </div>
@@ -271,110 +268,29 @@ title: Gestión de producción
             <div class="img-zoom-section">
                 <h2>Diagrama de operaciones de proceso Engranajes Helicoidales</h2>
                 <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/helicoidales/procesosPRE.svg' | relative_url }}" alt="operaciones"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <!--
-            <div class="img-zoom-section">
-                <h2>[Pre] Diagrama de análisis de proceso Engranajes Helicoidales</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/helicoidales/analisisPRE.svg'' | relative_url }}" alt="analisis"> 
+                    <img src="{{ '/assets/images/gestion/helicoidales/procesosHELICOIDAL.svg' | relative_url }}" alt="operaciones"> 
                 </div>
             </div>
             <br>
             <br>
             <div class="img-zoom-section">
-                <h2>[Pre] Diagrama de Spaguetti Engranajes Helicoidales</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/helicoidales/spaghettiPRE.svg'' | relative_url }}" alt="spaguetti"> 
-                </div>
+                <h2>Diagrama de análisis de proceso Engranajes Helicoidales</h2>
+                <iframe src="{{ '/assets/images/gestion/helicoidales/analisisHELICOIDAL.pdf' | relative_url }}" 
+                width="900" height="600"></iframe> 
             </div>
-            <br>
-            <br>
-            <div class="img-zoom-section">
-                <h2>[Pre] Diagrama VSM Engranajes Helicoidales</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/helicoidales/vsmPRE.svg'' | relative_url }}" alt="pre-vsm"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="img-zoom-section">
-                <h2>[Pre] OEE Engranajes Helicoidales</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/helicoidales/oeePRE.svg'' | relative_url }}" alt="OEE"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="video-container">
-                <h2>[Pre] Simulación Tecno-Matrix Engranajes Helicoidales</h2>
-                <iframe 
-                    src="https://www.youtube.com/embed/76S5OAxummk" 
-                    title="Simulación Pre-Automatización"
-                    frameborder="0"
-                    allowfullscreen>
-                </iframe>
-            </div>
-            -->
         </div>
 
         <div class="gestion-section">
             <br>
             <br>
             <div class="img-zoom-section">
-                <h2>Diagrama de operaciones de proceso Engranajes Helicoidales</h2>
+                <h2>Gráficas</h2>
                 <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/helicoidales/procesosPOST.svg' | relative_url }}" alt="operaciones"> 
+                    <img src="{{ '/assets/images/gestion/helicoidales/estadisticaHELICOIDAL.png' | relative_url }}" alt="operaciones"> 
                 </div>
             </div>
             <br>
             <br>
-            <!--
-            <div class="img-zoom-section">
-                <h2>[Post] Diagrama de análisis de proceso Engranajes Helicoidales</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/helicoidales/analisisPOST.svg' | relative_url }}" alt="analisis"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="img-zoom-section">
-                <h2>[Post] Diagrama de Spaguetti Engranajes Helicoidales</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/helicoidales/spaghettiPOST.svg' | relative_url }}" alt="spaguetti"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="img-zoom-section">
-                <h2>[Post] Diagrama VSM Engranajes Helicoidales</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/helicoidales/vsmPOST.svg' | relative_url }}" alt="pre-vsm"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="img-zoom-section">
-                <h2>[Post]OEE Engranajes Helicoidales</h2>
-                <div class="img-zoom">
-                    <img src="{{ '/assets/images/gestion/helicoidales/oeePOST.svg' | relative_url }}" alt="OEE"> 
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="video-container">
-                <h2>[Post] Simulación Tecno-Matrix Engranajes Helicoidales</h2>
-                <iframe 
-                    src="https://www.youtube.com/embed/76S5OAxummk" 
-                    title="Simulación Pre-Automatización"
-                    frameborder="0"
-                    allowfullscreen>
-                </iframe>
-            </div>
-            -->
         </div>
     </div>
 </div>
