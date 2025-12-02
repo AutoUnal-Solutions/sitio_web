@@ -2,16 +2,17 @@
 layout: default
 title: Celda Robotica
 ---
-<div class="page-intro">
-    <h1>Celda Robotica</h1>
-</div>
-
 <br>
 <br>
 <div class="img-zoom-section">
     <div class="img-zoom">
         <img src="{{ '/assets/images/robotica/ABB.png' | relative_url }}" alt="spaguetti">
     </div>
+</div>
+<br>
+<br>
+<div class="page-intro">
+    <h1>Celda Robotica</h1>
 </div>
 <br>
 <br>
@@ -61,12 +62,13 @@ title: Celda Robotica
     </div>
 </div>
 
-<div class="page-intro">
-    <h1>Selección Gripper</h1>
-</div>
-
-<div class="info-sec">    
-    <div class="info">        
+<div class="info-sec">     
+    <div class="info-img">
+        <img src="{{ '/assets/images/robotica/gripper.webp' | relative_url }}" 
+        alt="motorreductor" class="motorreductor">
+    </div>   
+    <div class="info"> 
+        <h1>Selección Gripper</h1>       
         <p>El gripper OnRobot 3FG25 permite manipular engranajes no solo desde su diámetro exterior de 
             hasta 155 mm, sino también desde diámetros internos. Su diseño de tres dedos se expande 
             hacia afuera para sujetar la pieza desde el orificio central, ofreciendo un agarre firme 
@@ -74,6 +76,7 @@ title: Celda Robotica
             mantiene la estabilidad, soporta cargas de hasta 25 kg y asegura una colocación precisa 
             en las máquinas CNC.</p>
 
+        <div class="table-info">
         <table class="table-pesos">
             <tr>
                 <th>Elemento</th>
@@ -96,9 +99,49 @@ title: Celda Robotica
                 <td>1.6</td>
             </tr>
         </table>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="video-container">
+    <h2>Simulación Trayectoria RobotStudio</h2>
+    <iframe 
+        src="https://youtube.com/embed/wzx8rY8hKtg" 
+        title="Simulación Trayectoria RobotStudio"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+</div>
+<br>
+<br>
+<div class="info-sec"> 
+    <h2>Seguridad y señales de emergencia</h2>     
+    <div class="info">              
+        <p>La celda cuenta con un sistema de seguridad industrial que garantiza una operación confiable sin la 
+            presencia de operarios dentro del área de trabajo del robot. Todo el perímetro está protegido con un 
+            cercado que impide el acceso no autorizado durante el funcionamiento. El ingreso se realiza 
+            únicamente por una puerta equipada con un sensor RFID, que detecta la apertura y detiene 
+            inmediatamente el robot para evitar cualquier riesgo. Para reactivar la celda después de una 
+            intervención, el operario autorizado debe salir del área y realizar un reinicio seguro desde el 
+            panel de control.
+        </p>
+
+        <p>Además del control de acceso, la celda incorpora paradas de emergencia ubicadas estratégicamente 
+        cerca de las bandas transportadoras y en el controlador principal, lo que permite reaccionar 
+        rápidamente ante cualquier condición inesperada. El sistema también utiliza una baliza de 
+        señalización que indica el estado de operación, facilitando la supervisión desde el exterior y 
+        permitiendo identificar de forma visual si el robot está detenido, en funcionamiento o en 
+        transición.</p>   
+
+        <ul>
+            <li>Color rojo: cuando el sistema está apagado.</li>
+            <li>Color verde: cuando el sistema está encendido.</li>
+            <li>Colores verde y amarillo: cuando el manipulador está en movimiento.</li>
+        </ul>        
     </div>
     <div class="info-img">
-        <img src="{{ '/assets/images/robotica/gripper.webp' | relative_url }}" 
+        <img src="{{ '/assets/images/robotica/CeldaRobotizada.jpg' | relative_url }}" 
         alt="motorreductor" class="motorreductor">
     </div>
 </div>

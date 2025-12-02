@@ -347,6 +347,7 @@ select {
 
 .img-zoom {
   width: 90vw;
+  height: auto;
   max-height: 550px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -354,9 +355,12 @@ select {
 
 .img-zoom img {
   width: 100%;
-  height: auto;
   transform-origin: center center;
   transition: transform 0.2 ease;
+}
+
+#inverstion, #costos {
+  height: 300px;
 }
 
 #Gestion-proyecto{
@@ -466,24 +470,73 @@ select {
 }
 
 .table-pesos {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    margin: 20px 0;
+  width: auto;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
 }
 
 .table-pesos th, 
 .table-pesos td {
-    border: 1px solid #ccc;
-    padding: 10px 14px;
-    text-align: left;
+  border: 1px solid #002060;
+  padding: 10px 14px;
+  text-align: center;
 }
 
 .table-pesos th {
-    background-color: #f4f4f4;
-    font-weight: bold;
+  background-color: #00206011;
+  font-weight: bold;
 }
 
 .table-pesos tr:nth-child(even) td {
-    background-color: #fafafa;
+  background-color: #fafafa;
+}
+
+.table-section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.table-info{
+  width: auto;
+  max-width: 60%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.six-img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.six-img .item {
+    text-align: center;
+}
+
+.six-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.six-img p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+#nube {
+  width: 80%;
+}
+
+#arqui {
+  width: 80%;
 }

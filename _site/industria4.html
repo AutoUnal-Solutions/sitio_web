@@ -23,6 +23,7 @@
             <div class="index">
                 <h1>Índice</h1>
                 <br>
+                <h2><a href="/industria4.html">Introducción a la automatización</a></h2>
                 <h2><a href="/planeacion.html">Planeación</a></h2>
                 <h2><a href="/gestion.html">Gestión de Producción</a></h2>
                 <h2><a href="/economia.html">Evaluación económica</a></h2>
@@ -30,18 +31,89 @@
                 <h2><a href="/controladores.html">Controladores Industriales</a></h2>
                 <h2><a href="/dfactory.html">Digital Factory</a></h2>
                 <h2><a href="/scada.html">SCADA</a></h2>
-                <h2><a href="/industria4.html">Industria 4.0</a></h2>
             </div>
         </div>
         <div class="page-intro">
-    <h1>Industria 4.0</h1>
-</div>
-<br>
-<div class="img-zoom-section">
-    <div class="img-zoom">
-        <img src="/assets/images/nodisponible.png" alt="operaciones"> 
+    <h1>Introducción a la automatización de manufactura</h1>
+    <div class="info-sec" id="nube">    
+        <div class="info" >        
+            <p>La pirámide de automatización la integración de nuestro proceso de rectificación de 
+            engranajes dentro de la arquitectura tecnológica de una planta moderna. En la base 
+            se encuentra el proceso físico, compuesto por el robot manipulador (IR 4600 de ABB),
+            las bandas transportadoras y las máquinas CNC, que ejecutan directamente la 
+            transformación de la pieza.</p>
+            <p>Sobre este nivel están los dispositivos de sensado (sensores infrarrojos 
+            industriales para conteo e identificación de piezas, sensores XGHB320345) y 
+            manipulación que permiten detectar posiciones, estados y condiciones del proceso 
+            para garantizar una operación confiable. Además se muestra el PLC elegido para la 
+            programación del funcionamiento de los actuadores (CompactLogix 5380 Controller).</p>
+            <p>En el nivel de monitoreo y supervisión se encuentra la plataforma SCADA del proyecto, 
+            donde Ignition proporciona visualización, alarmas y control operativo, mientras que Azure 
+            actúa como infraestructura complementaria para la comunicación externa del Ignition. 
+            Ambos trabajan en el mismo nivel, apoyando la supervisión avanzada y la disponibilidad 
+            de información en tiempo real.</p>
+        </div>
+        <div class="info-img">
+            <img src="/assets/images/intro/piramide.png" 
+            alt="motorreductor" class="motorreductor">
+        </div>
     </div>
 </div>
+<br>
+<br>
+<div class="page-intro">
+<div class="img-zoom-section" id="arqui">
+    <h2>Arquitectura de Comunicaciones</h2>
+    <div class="img-zoom">
+        <img src="/assets/images/intro/Arquitectura.svg" alt="spaguetti">
+    </div>
+    <p>Nuestro sistema integra de manera transparente la operación local y la operación en la nube
+    mediante una arquitectura híbrida basada en Ignition. En la infraestructura local, el servidor
+    principal se encuentra configurado en una dirección, correspondiente al computador A. Desde este
+    servidor se ejecuta Ignition junto con su módulo OPC-UA, el cual se comunica directamente con el
+    SCADA local para garantizar una adquisición de datos rápida, confiable y con mínima latencia.
+    Paralelamente, este entorno local también mantiene una conexión como cliente OPC-DA hacia RSLinx,
+    lo que permite interactuar con los controladores Allen-Bradley y mantener la coherencia de datos
+    en todo el sistema de automatización.
+    </p>
+
+    <p>
+    Dentro del entorno de pruebas y simulación, el proyecto integra Studio 5000 tanto en modo Run
+    como mediante Logix Simulate, permitiendo sincronizar en tiempo real el comportamiento del
+    controlador y validar la lógica sin necesidad de intervenir equipos físicos. Esto asegura un
+    desarrollo seguro, flexible y adaptable a los diferentes escenarios que pueden surgir durante la
+    puesta en marcha o en el análisis de funcionamiento.
+    </p>
+
+    <p>
+    A nivel de infraestructura en la nube, el proyecto incorpora un Ignition alojado en Azure,
+    asociado a la dirección IP pública del contenedor proporcionado por este servicio. Este entorno
+    remoto se enlaza con la operación local mediante la comunicación MQTT, utilizando un cliente
+    MQTT Engine que establece un puente seguro entre ambos sistemas. Gracias a este mecanismo, los
+    datos pueden ser publicados y consumidos de manera eficiente, permitiendo supervisar, analizar y
+    gestionar la información del proceso desde cualquier ubicación con acceso a internet.
+    </p>
+
+    <p>
+    Ambos servidores Ignition, tanto el local como el alojado en Azure, pueden navegarse de forma
+    intuitiva. El sistema incorpora un mecanismo de transición rápida entre plataformas simplemente
+    seleccionando el logotipo de la empresa, lo que facilita alternar entre los dos entornos y
+    acceder a las interfaces visuales correspondientes. Estas interfaces agrupan las diferentes
+    ventanas de supervisión y control del proyecto, que serán explicadas en detalle en fases
+    posteriores por otro miembro del equipo, incluyendo cómo se gestionan los datos, la estructura
+    de las pantallas y la lógica de comunicación entre los dos SCADA.
+    </p>
+</div>
+</div>
+<br>
+<br>
+<div class="img-zoom-section">
+    <h2>Diagrama de Instrumentación</h2>
+    <div class="img-zoom">
+        <img src="/assets/images/intro/PI&D.svg" alt="spaguetti">
+    </div>
+</div>
+<br>
 <br>
 
         <div class="footer">

@@ -48,6 +48,12 @@ title: Autounal Solutions
         <div class="modules-slider">    
             <div class="modules-container">
                 <div class="container-img-module">
+                    <img src="{{ '/assets/images/cover/industria4.jpg' | relative_url }}" alt="Industria4" class="img-module">
+                    <div class="overlay">
+                        <div class="text"><a href="{{ '/industria4.html' | relative_url }}">Introducción a la automatización</a></div>
+                    </div>
+                </div>
+                <div class="container-img-module">
                     <img src="{{ '/assets/images/cover/planeacion.jpg' | relative_url }}" alt="Planeacion" class="img-module">
                     <div class="overlay">
                         <div class="text"><a href="{{ '/planeacion.html' | relative_url }}">Planeación</a></div>
@@ -89,25 +95,42 @@ title: Autounal Solutions
                         <div class="text"><a href="{{ '/scada.html' | relative_url }}">SCADA</a></div>
                     </div>
                 </div>
-                <div class="container-img-module">
-                    <img src="{{ '/assets/images/cover/industria4.jpg' | relative_url }}" alt="Industria4" class="img-module">
-                    <div class="overlay">
-                        <div class="text"><a href="{{ '/industria4.html' | relative_url }}">Industria 4.0</a></div>
-                    </div>
-                </div>
             </div>
         </div>
         <button class="next"><i class="bi bi-arrow-right-square-fill"></i></button>
     </div>
 </div>
-
+<br>
+<br>
 <div class="results-section">
     <h1>Resultados e Impacto</h1>
     <br>
-    <h4>
-        Mostrar métricas (tiempos reducidos, eficiencia, calidad).
-        También se puede incluir impacto social o ambiental.
-    </h4>
+    <div class="table-section">    
+        <div class="table-info">   
+        <table class="table-pesos">    
+        <tr>
+            <th>Cuadro resumen</th>
+        </tr>
+        <tr>
+            <td>Reducción del tiempo de ciclo (Tc) de 144.70 min/u a 42.35 min/u</td>
+        </tr>
+        <tr>
+            <td>Costo total del proyecto: $1.084.989.604 COP</td>
+        </tr>
+        <tr>
+            <td>Tiempo de ejecución del proyecto 16 a 20 semanas.</td>
+        </tr>
+        <tr>
+            <td>El proyecto se distingue por su arquitectura flexible y escalable, 
+                capaz de integrar múltiples sistemas y controladores en un mismo SCADA, 
+                reprogramar la celda robotizada y las CNC para fabricar nuevas piezas, 
+                y replicarse fácilmente en otras áreas de la planta debido a la similitud 
+                de los procesos
+            </td>
+        </tr>
+        </table>
+        </div>
+    </div>
     <br>
     <img src="{{ '/assets/images/cover/results.svg' | relative_url }}" alt="results" class="img-results">
 </div>
